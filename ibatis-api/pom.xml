@@ -1,0 +1,86 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.soho.common.platform</groupId>
+		<artifactId>common-platform</artifactId>
+		<version>1.0.0-Final</version>
+	</parent>
+
+	<groupId>com.soho.common.platform</groupId>
+	<artifactId>ibatis-api</artifactId>
+	<name>Ibatis API</name>
+	<version>1.0.0-Final</version>
+
+	<organization>
+		<name>SOHO studio</name>
+	</organization>
+	<scm>
+		<connection>andy.zheng0807@gmail.com</connection>
+		<developerConnection>andy.zheng</developerConnection>
+		<tag>Ibatis API</tag>
+	</scm>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<sourceEncoding>UTF-8</sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<!-- Common library -->
+		<dependency>
+			<groupId>com.soho.common.platform</groupId>
+			<artifactId>commons</artifactId>
+		</dependency>
+		<!-- End common library -->
+
+		<!-- Spring -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>3.2.6.RELEASE</version>
+		</dependency>
+		<!-- End Spring -->
+
+		<!-- ibatis2 and mybatis -->
+		<dependency>
+			<groupId>org.apache.ibatis</groupId>
+			<artifactId>ibatis-sqlmap</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+		</dependency>
+		<!-- End ibatis2 and mybatis -->
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>add-source</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>src/main/ibatis</source>
+								<source>src/main/mybatis</source>
+							</sources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

@@ -1,0 +1,20 @@
+import java.util.*;
+
+import com.platform.common.config.*;
+import com.platform.common.utils.*;
+import com.platform.common.utils.security.*;
+
+import com.platform.common.mail.*;
+import com.platform.common.excel.*;
+
+import com.platform.common.paging.*;
+import com.platform.common.entity.*;
+
+import com.platform.common.dao.*;
+import com.platform.common.dao.mybatis.*;
+import com.platform.common.dao.mybatis.impl.*;
+import com.platform.common.services.*;
+import com.platform.common.services.impl.*;
+import com.platform.common.web.*;
+
+import ${basepackage}.model.*;

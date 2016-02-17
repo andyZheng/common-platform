@@ -1,0 +1,74 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.soho.common.platform</groupId>
+		<artifactId>common-platform</artifactId>
+		<version>1.0.0-Final</version>
+	</parent>
+
+	<groupId>com.soho.common.platform</groupId>
+	<artifactId>spring-data-api</artifactId>
+	<name>Spring-Data API</name>
+	<version>1.0.0-Final</version>
+
+	<organization>
+		<name>SOHO studio</name>
+	</organization>
+	<scm>
+		<connection>andy.zheng0807@gmail.com</connection>
+		<developerConnection>andy.zheng</developerConnection>
+		<tag>Spring-Data API</tag>
+	</scm>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<sourceEncoding>UTF-8</sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<!-- Common library -->
+		<dependency>
+			<groupId>com.soho.common.platform</groupId>
+			<artifactId>commons</artifactId>
+		</dependency>
+		<!-- End common library -->
+
+		<!-- Spring -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-jpa</artifactId>
+			<version>[1.8.0.RELEASE,)</version>
+		</dependency>
+		<!-- End Spring -->
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>add-source</id>
+						<phase>generate-sources</phase>
+						<goals>
+							<goal>add-source</goal>
+						</goals>
+						<configuration>
+							<sources>
+								<source>src/main/springdata</source>
+							</sources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
